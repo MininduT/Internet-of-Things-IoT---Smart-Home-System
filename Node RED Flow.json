@@ -1,0 +1,561 @@
+[
+    {
+        "id": "840a203fbded11c2",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3e5bb96a3617bfe3",
+        "type": "ui_tab",
+        "name": "ThermoSense - Temperature & Humidity Monitoring System",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e2b8635100b3dbea",
+        "type": "ui_group",
+        "name": "TEMPERATURE",
+        "tab": "3e5bb96a3617bfe3",
+        "order": 2,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "15e911f020146885",
+        "type": "mqtt-broker",
+        "name": "MQTT",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "5",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c9959e1dcced3cfa",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#535353",
+                "baseFont": "Lucida Sans Typewriter,Lucida Console,Monaco,monospace",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#535353",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#535353",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#797979",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#535353",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Lucida Sans Typewriter,Lucida Console,Monaco,monospace"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "1556f6b63a67abed",
+        "type": "ui_group",
+        "name": "HUMIDITY",
+        "tab": "3e5bb96a3617bfe3",
+        "order": 3,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e77621824d6d2d2f",
+        "type": "ui_group",
+        "name": "HEAT INDEX",
+        "tab": "3e5bb96a3617bfe3",
+        "order": 4,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "08581ed04c52bcb4",
+        "type": "ui_tab",
+        "name": "ThermoSense - Heat Index Forecasting",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3916fe3b6093f641",
+        "type": "ui_group",
+        "name": "PAST 12 MONTHS",
+        "tab": "08581ed04c52bcb4",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "52d94b9e5fef88d0",
+        "type": "ui_group",
+        "name": "FUTURE 12 MONTHS",
+        "tab": "08581ed04c52bcb4",
+        "order": 2,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "644c208ed1a0a008",
+        "type": "mqtt in",
+        "z": "840a203fbded11c2",
+        "name": "Temperature",
+        "topic": "sensor/dht/temp",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "15e911f020146885",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 140,
+        "wires": [
+            [
+                "d08123ab196e52d7",
+                "e1cd488fa540a89a",
+                "d52824bf19d7d141"
+            ]
+        ]
+    },
+    {
+        "id": "c488f32e5921ca28",
+        "type": "mqtt in",
+        "z": "840a203fbded11c2",
+        "name": "Humidity",
+        "topic": "sensor/dht/humidity",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "15e911f020146885",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 380,
+        "wires": [
+            [
+                "d08123ab196e52d7",
+                "32fcbf5f751d1139",
+                "cb72c1f0e7ae6319"
+            ]
+        ]
+    },
+    {
+        "id": "d08123ab196e52d7",
+        "type": "debug",
+        "z": "840a203fbded11c2",
+        "name": "Msg.Payload",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e1cd488fa540a89a",
+        "type": "ui_gauge",
+        "z": "840a203fbded11c2",
+        "name": "Temperature",
+        "group": "e2b8635100b3dbea",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "Celsius",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "25",
+        "seg2": "33",
+        "diff": false,
+        "className": "",
+        "x": 590,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d52824bf19d7d141",
+        "type": "ui_chart",
+        "z": "840a203fbded11c2",
+        "name": "Temperture Analysis",
+        "group": "e2b8635100b3dbea",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Analysis",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "60",
+        "removeOlder": "15",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 620,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb72c1f0e7ae6319",
+        "type": "ui_chart",
+        "z": "840a203fbded11c2",
+        "name": "Humidity Analysis",
+        "group": "1556f6b63a67abed",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Humidity Analysis",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "15",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 610,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "32fcbf5f751d1139",
+        "type": "ui_gauge",
+        "z": "840a203fbded11c2",
+        "name": "Humidity",
+        "group": "1556f6b63a67abed",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "35",
+        "seg2": "65",
+        "diff": false,
+        "className": "",
+        "x": 580,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b95509821174b38a",
+        "type": "mqtt in",
+        "z": "840a203fbded11c2",
+        "name": "Heat Index",
+        "topic": "sensor/dht/heatindex",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "15e911f020146885",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [
+                "d08123ab196e52d7",
+                "a504fb6bfaad8864",
+                "46cda0ab8f45eb74"
+            ]
+        ]
+    },
+    {
+        "id": "a504fb6bfaad8864",
+        "type": "ui_gauge",
+        "z": "840a203fbded11c2",
+        "name": "Heat Index",
+        "group": "e77621824d6d2d2f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Heat Index",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "50",
+        "max": "150",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "80",
+        "seg2": "100",
+        "diff": false,
+        "className": "",
+        "x": 590,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "46cda0ab8f45eb74",
+        "type": "ui_chart",
+        "z": "840a203fbded11c2",
+        "name": "",
+        "group": "e77621824d6d2d2f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Heat Index Analysis",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "15",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 620,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d5902ba0b106cef",
+        "type": "ui_media",
+        "z": "840a203fbded11c2",
+        "group": "3916fe3b6093f641",
+        "name": "Past Forecast",
+        "width": 0,
+        "height": 0,
+        "order": 0,
+        "category": "Forecasting",
+        "file": "PAST.png",
+        "layout": "adjust",
+        "showcontrols": true,
+        "loop": true,
+        "onstart": false,
+        "scope": "local",
+        "tooltip": "",
+        "x": 140,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a918a5357533af4b",
+        "type": "ui_media",
+        "z": "840a203fbded11c2",
+        "group": "52d94b9e5fef88d0",
+        "name": "Future Forecast",
+        "width": 0,
+        "height": 0,
+        "order": 0,
+        "category": "Forecasting",
+        "file": "FUTURE.png",
+        "layout": "adjust",
+        "showcontrols": true,
+        "loop": true,
+        "onstart": false,
+        "scope": "local",
+        "tooltip": "",
+        "x": 140,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    }
+]
